@@ -11,6 +11,7 @@ set -g theme_hostname always
 
 
 alias vi='nvim'
+alias lg='lazygit'
 
 
 if status is-interactive
