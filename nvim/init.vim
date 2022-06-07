@@ -51,6 +51,8 @@ augroup END
 
 call plug#begin('~/.config/nvim/')
 
+Plug 'lervag/vimtex'
+
 Plug 'ruby-formatter/rufo-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -450,6 +452,11 @@ endfunction
 
 vnoremap ,m :<c-w><c-w><c-w><c-w><c-w>call Comment()<CR>
 vnoremap m, :<c-w><c-w><c-w><c-w><c-w>call UnComment()<CR>
+
+" vimtex
+filetype plugin indent on
+syntax enable
+
 
 
 
