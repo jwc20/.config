@@ -136,6 +136,8 @@ Plug 'honza/vim-snippets'
 call plug#end()
 
 
+let g:python3_host_prog = '/opt/homebrew/bin/python3'
+
 " cmp
 set completeopt=menuone,noinsert,noselect
 lua <<EOF
