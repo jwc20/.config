@@ -137,6 +137,8 @@ Plug 'honza/vim-snippets'
 
 call plug#end()
 
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
 
@@ -263,9 +265,20 @@ call defx#custom#column('icon', {
       \ 'opened_icon': '▾',
       \ })
 
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : 'M',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : '✭',
+  \ 'Renamed'   : '➜',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : '☒',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ })
+
 " Set appearance
 call defx#custom#option('_', {
-	      \ 'columns': 'mark:indent:icon:space:indent:icons:space:filename:type:size:time',
+	      \ 'columns': 'mark:indent:icon:space:indent:icons:space:filename:type:git:size:time',
 	      \ })
 
 
