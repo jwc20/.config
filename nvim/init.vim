@@ -471,6 +471,7 @@ filetype plugin indent on
 syntax enable
 
 
+nmap \z :w !python3 <CR>
 
 
 " lua << EOF require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules"} } } 
